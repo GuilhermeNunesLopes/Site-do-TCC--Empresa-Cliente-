@@ -1,0 +1,218 @@
+<html>		
+<!doctype html>
+	<meta charset="utf-8">
+		    <head>
+		        <title>Padaria Henriqueta</title>
+
+		        <!--Chamamos a folha de estilo do site--><link rel="stylesheet" type="text/css" href="Estilopadaria.css">
+				<link rel="stylesheet" href="Slide.css">
+				<link rel="icon" href="Henriqueta.png" type="image/png" />
+				<script src="Rolarlink.js" type="text/javascript"></script>
+			<link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700" rel="stylesheet">"
+				<!--Ao rolar a pagina a seta irá aparecer-->
+				<script type="text/javascript">
+				$( window ).scroll(function() {
+    nScrollPosition = $( window ).scrollTop();
+    if(nScrollPosition>=100){
+         $( ".seta" ).css( "display", "block" );
+    }else{
+         $( ".seta" ).css( "display", "none" );
+    }
+});
+</script>
+				<!--Ao clicar na seta o meu irá subir-->
+				<script type="text/javascript">
+    $(document).ready(function() {
+       $('.seta').click(function(){ 
+          $('html, body').animate({scrollTop:0}, 'slow');
+      return false;
+
+         });
+     });
+
+</script>
+				<!--Ao clicar no link , ocorrerá uma leve rolagem-->
+				<script type="text/javascript"> 				
+jQuery(document).ready(function($) { 
+    $(".scroll").click(function(event){        
+        event.preventDefault();
+        $('html,body').animate({scrollTop:$(this.hash).offset().top}, 900);
+   });
+});
+</script> 
+			
+		     </head>
+			  <!--Função para aparecer a seta-->
+
+			  <body>
+             <!--Todos os itens do munu estão dentro da div-->    <div id="tudomenu"><a href="#"><img id="face" src="Facebook.logo2.png"></a><font id="tel" face="Nunito" color="white">Telefone: (11)4636-1562</font></div>
+																	<div id="tudomenu2">
+																	<img id="logo" src="Henriqueta.png">
+			     	<!--Este é a div que contem o menu--><div id="topo">
+
+          
+											<!--Essa div é primordial para o funcionamento do menu-->	<div id="nav">
+                                               
+												<!--Opções do menu -->	
+													<ul>  
+														<li><a  class="scroll" href="#Inicio">INICIO</a></li>
+														<li><a class="scroll" href="#EProdutos">PRODUTO</a></li>
+														<li><a class="scroll" href="#ESobre">SOBRE</a></li>
+														<li><a class="scroll" href="#EContato">CONTATO</a></li>
+													</ul>
+												</div>	</div></div>
+											<a href="#tudomenu"><img class="seta"  src="seta.png"></a>
+												<div id="Inicio">
+                                                <br>
+<!--slide-->
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("Islide");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+
+     x[i].style.display = "none"; 	
+  }
+  x[slideIndex-1].style.display = "block";
+  setTimeout(slideIndex , 2000); 
+}
+  
+</script>
+<script type="text/javascript"> 
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("Islide");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none"; 
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1} 
+    x[slideIndex-1].style.display = "block"; 
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+												<div class="slide">
+  <a class="scroll" href="#EProdutos"><img class="Islide" class="AutoM" src="Pão.png" style="width:98%"></a>
+  <a class="scroll" href="#EProdutos"><img class="Islide" class="AutoM"src="frios1.png" style="width:98%"></a>
+  <a class="scroll" href="#EProdutos"><img class="Islide" class="AutoM" src="bebidas.png" style="width:98%"></a>
+ <a class="scroll" href="#EProdutos"><img class="Islide" class="AutoM" src="variedade.png" style="width:98%"></a>
+
+  <a class="btnesquerdo" onclick="plusDivs(1)">&nbsp&nbsp&#10095;</a>
+   <a class="btndireito" onclick="plusDivs(-1)">&nbsp&nbsp&#10094;</a>
+</div>
+<br>
+<div id="Bemvindo">
+	<h4 align="justify"><center>BEM VINDO AO MERCADO & PANIFICADORA HENRIQUETA </center></h4><br><H3 align="justify"><center>NOSSOS CLIENTES , TEM A CONFIANÇA<br> QUE NOSSOS PRODUTOS CHEGARÃO QUENTINHOS EM SUA MESA.</center></H3>
+	</div></div>
+	<!--Produtos-->
+	<div id="EProdutos"><h5>PRODUTOS:</h5></div>
+	<div id="Produtos">
+	<div id="frios">
+	<legend>Frios:</legend>
+	
+	<img id="frios1" title="Presunto" src="Presunto.jpg">
+	<img id="frios2" title="Mortadela" src="Mortadela.jpg">
+	<img id="frios3" title="Mussarela" src="Mussarela.jpg">
+	<img id="frios4" title="Peito de perú" src="PeitodePeru.jpg">
+	</div>
+	<div id="pães">
+	<legend>Pães:</legend>
+	<img id="pao1" title="Rosquinha" src="Rosquinha.jpg">
+	<img id="pao2" title="Sonho" src="Sonho.jpg">
+	<img id="pao3" title="Pão de Frios" src="Pãodefrios.jpg">
+	<img id="pao4" title="Baguete" src="baguete.jpg">
+	<img id="pao5" title="Pão de Sal" src="Pãodesal.jpg">
+	<img id="pao6" title="Pão de Queijo" src="Pãodequeijo.jpg">
+	</div>
+	<div id="bolachas">
+	<legend>Bolachas:</legend>
+	<img id="bolacha1" title="Bolacha de sal" src="bolachadesal.jpg">
+	<img id="bolacha2" title="Bolacha recheada" src="bolacharecheada.jpg">
+	<img id="bolacha3" title="Biscoito de povilho" src="biscoitodepovilho.jpg">
+	<img id="bolacha4" title="Bolacha de maisena" src="bolachademaisena.jpg">
+	</div>
+	<div id="bebidas">
+	<legend>Bebidas:</legend>
+		<img id="bebida1" title="Refrigerantes" src="refrigerante.jpg">
+			<img id="bebida2" title="Sucos" src="suco.jpg">
+				<img id="bebida3" title="Água" src="agua.jpg">
+					<img id="bebida4" title="Achocolatado" src="achocolatado.jpg">
+					<img id="bebida5" title="Cerveja" src="cerveja.jpg">
+					<img id="bebida6" title="Leite" src="leite.jpg">
+	</div>
+	</div>
+		<!--Sobre-->
+	<div id="ESobre"><h5>&nbsp&nbsp&nbspSOBRE:</h5></div>
+	<div id="Sobre">
+	<div id="Texto">
+	<br>
+	<h4 align="center">Mercado  & Panificadora Henriqueta</h4>
+	<h3 align="justify">&nbsp&nbspO comércio tem seu nome em homenagem a filha do antigo proprietário  ,fundada a mais de uma decada  ,inicialmente era  um emprendimento com um unico proprietário .<br>Bem cedo foi comprada e torno-se uma iniciativa familiar .Com o passar do tempo  os proprietários decidiram mudar o local do comércio, porém mantiveram o nome HENRIQUETA para manter a familiaridade com os clientes.<br>Atualmente é um dos estabelecimentos mais conhecidos do bairro, possui funcionarios qualificados e sempre dispostos a satisfazer os seus clientes.<br><br>
+	O emprendimento  é gerenciado por duas pessoas sendo elas :<br> Maria Cleia Galdino e Otom Neto.
+	</div>
+	<img id="sLogo" title="Logotipo Padaria Henriqueta" src="Henriqueta.png">
+	</div>
+		<!--Contato-->
+	<div id="EContato"><h5>&nbsp&nbsp&nbspCONTATO: </h5></div>
+	<div id="Contato">
+	<div id="form">
+               <br> <br>
+        <!--formulario-->
+
+ 
+													   <form name="contato" action="c.php" method="post">
+                       <div>
+                       <br>
+                           <label id="l" for="nome">Nome:</label><br>
+                           <input  type="text" id="nome" name="nome" required />
+
+                       </div>
+                       <br>
+                       <div>
+                           <label id="l" for="email">E-mail:</label><br>
+                           <input type="email" id="email" name="email" required />
+                       </div>
+                         <br>  <br>
+                       <div>
+                           <label id="l" for="msg">Mensagem :</label><br>
+                           <textarea id="msg" cols="50" rows="20"name="mensagem" required></textarea>
+                       </div>
+                         <br>  <br>
+                       <div class="button">
+                           <button id="button1" onclick="funcao1()" type="submit">Enviar</button>
+                       </div>
+                   </form>
+				     <!--fomulario fechado-->
+             </div>
+				   <DIV id="mapa">
+				   <legend>NOSSA LOCALIZAÇÃO NO MAPA:</legend>
+              <img id="mapa2" src="mapa.png" title="Localização Mercado & Panificadora Henriqueta">
+           </div>
+           
+			
+			
+	</div>
+	<div id="rodape">
+	<br>
+	<h3 align="center"> © 2016 Todos os Direitos Reservados à Mercado & Padaria Henriqueta  </h3>
+	<h2 align="center"> DESENVOLVIDO POR : GENIUS | S.I </h2>
+	<h2 align="center"> Localização:Rua Novo Horizonte nº4,Jd Ivonete Poá-SP  </h2>
+	</div>
+												
+
+
+												
+												</body>
+												</html>
